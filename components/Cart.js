@@ -5,11 +5,12 @@ class Cart extends Component {
     static navigationOptions = {
         title: 'Cart'
     };
-
+    
     render() {
         return(
             <View>
                 <Text>Cart page</Text>
+                <Text>{this.props.screenProps.cartItemsIds}</Text>
             </View>
         );
     }

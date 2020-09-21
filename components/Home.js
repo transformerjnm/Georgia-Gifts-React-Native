@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, Text, ScrollView } from 'react-native';
 import HeroContent from './HeroContent';
 import products from '../shared/products';
 import ProductCard from './ProductCard';
@@ -15,12 +15,11 @@ const Home = props => {
         return bestSellersCards;
     };
 
-    return(
-        <View style={{backgroundColor: '#FFF'}}>
+    return(      
+        <ScrollView style={{flex: 1, backgroundColor: '#FFF'}}>
             <HeroContent />
-            <Text >Home page</Text>
             {getFeaturedProducts()}
-        </View>
+        </ScrollView>  
     );
 };
 

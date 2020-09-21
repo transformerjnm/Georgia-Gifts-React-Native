@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Dimensions, Image } from 'react-native';
+import { Text, View, Dimensions, Image } from 'react-native';
 
 class HeroContent extends Component {
-    static navigationOptions = {
-        title: 'Home'
-    };
-
-    render() {
-		let windowWidth = Dimensions.get('window').width;
+    render() {	
 		let windowHeight = Dimensions.get('window').height;
 		let heroContentVH = (windowHeight * .5);
 

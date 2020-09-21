@@ -17,8 +17,7 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
         let addCartItem = ( newItemId) =>{
             let newCart = [...this.state.cartItemsIds];
             newCart.push(newItemId);
-			this.setState( {cartItemsIds: newCart } ) ;     
-			console.log("state", this.state)
+			this.setState( {cartItemsIds: newCart } );     
         };
 
         let clearCart = () => this.setState({ cartItemsIds: []});
@@ -112,7 +111,7 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 		return (
 			<View style={{ flex: 1, backgroundColor: '#FFF' }}>
-				<MainNavigator screenProps={{CartItemId: this.state.cartItemsIds, addCartItem: addCartItem}}/>
+				<MainNavigator screenProps={{ cartItemsIds: this.state.cartItemsIds, addCartItem: addCartItem}}/>
 				<StatusBar style="auto" />
 			</View>
 		);
