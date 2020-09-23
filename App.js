@@ -32,9 +32,7 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
                 this.setState({ cartItemsIds: newCart });
             }
         };
-
-		let cart = <Text>Cart</Text>;
-		
+	
 		const HomeNavigator = createStackNavigator(
 			{
 					Home: { screen: Home },				
@@ -48,7 +46,6 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 							headerTitleStyle: {
 									color: '#ea5e23'
 							},
-							headerRight: cart,
 					})
 			}
 		);
@@ -66,7 +63,6 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 					headerTitleStyle: {
 							color: '#ea5e23'
 					},
-					headerRight: cart,
 				})
 			}
 		);
@@ -84,7 +80,6 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 					headerTitleStyle: {
 							color: '#ea5e23'
 					},
-					headerRight: cart,
 				})
 			}
 		);

@@ -2,7 +2,7 @@ let products = [
     {
         id: 1,
         name: "WildFlower Honey",
-        description: "Local wildflower honey in a mason jar.",
+        description: "Enjoy a all natural Local Honey. The sweet unfiltered honey provides health benefits and goes great with tea. Comes in a southern Mason jar with a handle.",
         price: 16.05,
         imgSrc: '../assets/images/honey.jpg',
         imgAlt: "Glass Jar of local Wildflower Honey image.",
@@ -11,7 +11,7 @@ let products = [
     {
         id: 2,
         name: "Empty Mason Jar",
-        description: "Empty Mason Jar perfect for sweet tea cup!",
+        description: "Need a jar or a cup with some a farmhouse feel? Enjoy this premium Glass Mason jar with a handle. Holds sixteen ounces of your favorite nectar.",
         price: 5.25,
         imgSrc: '../assets/images/masonjar.jpg',
         imgAlt: "Empty Mason Jar spilling sweet tea image.",
@@ -20,7 +20,7 @@ let products = [
     {
         id: 3,
         name: "Southern Charm Shirt: mens white",
-        description: "Southern Charm t-shirt for men.",
+        description: "Southern Charm T-shirts are one hundred percent cotton and American made. The soft durable material makes a perfect work, night, or day shirt.",
         price: 10.10,
         imgSrc: '../assets/images/t-shirt.jpg',
         imgAlt: "Southern Charm White T-shirt image.",
@@ -29,7 +29,7 @@ let products = [
     {
         id: 4,
         name: "Somersby Cider",
-        description: "The best cider in a glass bottle.",
+        description: "Looking for the best cider? Well this is not your grandma's apple cider. Enjoy a delicious bottle of the finest cider on earth. ",
         price: 8.00,
         imgSrc: '../assets/images/cider.jpg',
         imgAlt: "The best Glass Bottle Cider image.",
@@ -38,7 +38,7 @@ let products = [
     {
         id: 5,
         name: "Assorted candy",
-        description: "One pound bag of mystery assorted candy.",
+        description: "Got a sweet tooth? Well Then, send you taste buds on a wild journey by tasting all of the mystery candy in a one pound bag. You will have a wide variety of candy from sweet, sour, and tangy",
         price: 6.00,
         imgSrc: '../assets/images/candy.jpg',
         imgAlt: "Sweet and delicious assorted candy image.",
@@ -47,7 +47,7 @@ let products = [
     {
         id: 6,
         name: "Handmade soap bar four pack",
-        description: "Four cleansing handmade soap bars.",
+        description: "These handmade soap bars are gentle on skin, hard on dirt, sanitize, and moisturize the skin. Never have to deal with dry skin or unclean hands with these soap bars.",
         price: 7.30,
         imgSrc: '../assets/images/soap.jpg',
         imgAlt: "Four handmade soap bars stacked vertically image.",
