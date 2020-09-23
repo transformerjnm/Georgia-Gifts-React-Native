@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 
-class Cart extends Component {
-    static navigationOptions = {
-        title: 'Cart'
-    };
-    
-    render() {
-        return(
-            <View>
-                <Text>Cart page</Text>
-                <Text>{this.props.screenProps.cartItemsIds}</Text>
-            </View>
-        );
-    }
+export default Cart = props => {
+    return(
+        <View>
+            <Text>Cart page</Text>
+            <Text>{props.screenProps.cartItemsIds}</Text>
+        </View>
+    );
 };
 
-export default Cart;
+Cart['navigationOptions'] = screenProps => ({
+    title: 'Cart'
+});

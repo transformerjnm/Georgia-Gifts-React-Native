@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { Text, View, Picker, Modal } from 'react-native';
+import { Text, View, Modal } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 
-const Form = (props) => {
+export default Form = props => {
 		let [ name, setName ] = useState('');
 		let [ email, setEmail ] = useState('');
 		let [ helpMsg, setHelpMsg ] = useState('');
@@ -24,9 +24,9 @@ const Form = (props) => {
 
        	return(
 		   <View>
-				<Text>Let's Become Friends</Text>
-				<View style={{backgroundColor: '#F6F6F6', margin: 15, padding: 5, borderRadius: 16}}>
-						<Text>Who are you?</Text>
+				<Text style={{color: '#ea5e23', fontSize: 30, margin: 20, textAlign: 'center'}}>Let's Become Friends</Text>
+				<View style={{backgroundColor: '#F6F6F6', margin: 15, padding: 15, borderRadius: 16}}>
+						<Text style={{color: '#ea5e23', fontSize: 20,  textAlign: 'center'}}>Who are you?</Text>
 						<Input 
 							inputContainerStyle={{borderRadius: 16, borderColor: '#ea5e23', borderWidth: 1, padding: 3, backgroundColor: '#FFF'}} 
 							inputStyle={{color: '#000'}}
@@ -45,24 +45,17 @@ const Form = (props) => {
 							onChangeText={(email) => setEmail(email)} 
 							Value={email}
 						/>
-						<Text>What do you need today?</Text>
+						<Text style={{color: '#ea5e23', fontSize: 20,  textAlign: 'center'}}>What do you need today?</Text>
 						<Input 
-							inputContainerStyle={{borderRadius: 16, borderColor: '#ea5e23', borderWidth: 1, padding: 3, backgroundColor: '#FFF'}} 
+							inputContainerStyle={{borderRadius: 16, borderColor: '#ea5e23', borderWidth: 1, padding: 3, backgroundColor: '#FFF', height: 300}} 
 							inputStyle={{color: '#000'}}
 							labelStyle={{fontSize: 16, color: '#ea5e23'}}
 							label="How may we help you?" 
 							onChangeText={(helpMsg) => setHelpMsg(helpMsg)} 
 							Value={helpMsg}
-						/>
-						<Picker
-                        selectedValue={ productType }
-                        onValueChange={ product => setProductType(product) }>
-							<Picker.Item label='Shirt' value='Shirt' />
-							<Picker.Item label='Mason Jar' value='Mason Jar' />
-							<Picker.Item label='Soap' value='Soap' />
-                    	</Picker>
+						/>				
 						<Input 
-							inputContainerStyle={{borderRadius: 16, borderColor: '#ea5e23', borderWidth: 1, padding: 3, backgroundColor: '#FFF'}} 
+							inputContainerStyle={{borderRadius: 16, borderColor: '#ea5e23', borderWidth: 1, padding: 3, backgroundColor: '#FFF', height: 300}} 
 							inputStyle={{color: '#000'}}
 							labelStyle={{fontSize: 16, color: '#ea5e23'}}
 							label="Custom Product Request" 
@@ -102,5 +95,3 @@ const Form = (props) => {
 		   </View>
         );
 };
-
-export default Form;

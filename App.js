@@ -3,10 +3,11 @@ import React, { Component} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Home from './components/Home';
 import About from './components/about';
+import Contact from './components/Contact';
 import Cart from './components/Cart';
 import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
- class App extends Component {
+ export default class App extends Component {
 	state = {
 		cartItemsIds: [],
 	};
@@ -66,6 +67,23 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 				})
 			}
 		);
+
+		const ContactNavigator = createStackNavigator(
+			{
+				Contact: { screen: Contact }
+			},
+			{
+				navigationOptions: ({navigation}) => ({
+					headerStyle: {
+							backgroundColor: '#F6F6F6'
+					},
+					headerTintColor: '#ea5e23',
+					headerTitleStyle: {
+							color: '#ea5e23'
+					},
+				})
+			}
+		);
 		
 		const CartNavigator = createStackNavigator(
 			{
@@ -92,6 +110,9 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 					About: {
 						 screen: AboutNavigator
 					},
+					Contact: {
+						screen: ContactNavigator
+					},
 					Cart: {
 						screen: CartNavigator
 					}
@@ -112,5 +133,3 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 		);
 	};
 };
-
-export default App;

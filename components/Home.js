@@ -1,12 +1,12 @@
 import React from 'react';
-import { StyleSheet, Text, ScrollView } from 'react-native';
+import { Text, ScrollView } from 'react-native';
 import HeroContent from './HeroContent';
 import products from '../shared/products';
 import ProductCard from './ProductCard';
 import Footer from './Footer';
 import Form from './Form';
 
-const Home = props => {
+export default Home = props => {
     let getFeaturedProducts = () => {
         let bestSellers = products.filter( product => product.bestSeller === true );
         let bestSellersCards = bestSellers.map( (product) => {
@@ -31,5 +31,3 @@ const Home = props => {
 Home['navigationOptions'] = screenProps => ({
     title: 'Home'
 });
-
-export default Home;

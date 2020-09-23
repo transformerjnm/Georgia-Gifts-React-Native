@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { Text, View, Dimensions, Image } from 'react-native';
+import React from 'react';
+import { Text, View } from 'react-native';
 import { Icon } from 'react-native-elements';
 
-class Footer extends Component {
-    render() {	
+export default Footer = props => {
         return(
             <View style={{ backgroundColor: '#F6F6F6',  overflow: 'visible', marginTop: 16}}>
 				<View style={{flex:1, alignItems: 'center'}}>
@@ -37,7 +36,4 @@ class Footer extends Component {
             	</View>				
 			</View>
         );
-    }
 };
-
-export default Footer;

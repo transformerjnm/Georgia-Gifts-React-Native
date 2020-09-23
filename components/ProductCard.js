@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Text, View } from 'react-native';
-import { Card, ListItem, Button, Icon } from 'react-native-elements'
+import { Card, Button} from 'react-native-elements'
 
-const ProductCard = props =>  {
+export default ProductCard = props =>  {
     return(
         <View style={{backgroundColor: '#FFF', marginVertical: 20}}>         
 			<Card containerStyle={{borderColor: '#ea5e23', borderRadius: 16,}}>
@@ -14,5 +14,3 @@ const ProductCard = props =>  {
         </View>
     );
 };
-
-export default ProductCard;
