@@ -5,6 +5,7 @@ import products from '../shared/products';
 import HeroContent from './HeroContent';
 import Footer from './Footer';
 import Checkout from './Checkout';
+import * as Animatable from 'react-native-animatable';
 
 export default Cart = props => {
     let getProductsInfoById = () => {  
@@ -23,7 +24,7 @@ export default Cart = props => {
         let cartProductsDisplay = cartProducts.map( product => {
             total += product.price;
             return(
-                <View style={{borderBottomColor: '#ea5e23', borderBottomWidth: 2, margin: 16 }}>
+                <Animatable.View animation='fadeIn' duration={1000} delay={500} style={{borderBottomColor: '#ea5e23', borderBottomWidth: 2, margin: 16 }}>
                     <View style={{flexDirection: 'row'}}>
                     <Icon
 						name='times'
@@ -34,20 +35,22 @@ export default Cart = props => {
                     <Text style={{ marginLeft: 16, fontSize: 16, textAlign: "left"}}>{product.name}</Text>
                     </View>
                     <Text style={{fontSize: 16, marginTop: 16, marginLeft: 36}}>Price: ${product.price}</Text>
-                </View>
+                </Animatable.View>
             );
         });
         let cartDisplay = <Text style={{fontSize: 16,}}>Looks like your cart is empty. Please add some awesome stuff to the cart to proceed. </Text>;
         if(cartProductsDisplay.length){
          cartDisplay = (
             <ScrollView >
-                <View style={{alignItems: 'center'}}>
-                    <Button buttonStyle={{ fontSize: 16, height: 32, width: 150, backgroundColor: '#ea5e23', color: '#FFF' }} title="Clear Cart" onPress={() => props.screenProps.clearCart()}></Button>
-                </View>
-                {cartProductsDisplay}            
-                <Text style={{ fontSize: 16, margin: 16, marginLeft: 36 }}> Total: ${total.toFixed(2)} </Text>
-                <Text style={{ fontSize: 16, margin: 16, marginLeft: 36 }}> Total After Tax(7%): ${( total * 1.07 ).toFixed( 2 )}</Text>
-                <Checkout />    
+                <Animatable.View animation='fadeIn' duration={1000} delay={500}>
+                    <View style={{alignItems: 'center'}}>
+                        <Button buttonStyle={{ fontSize: 16, height: 32, width: 150, backgroundColor: '#ea5e23', color: '#FFF' }} title="Clear Cart" onPress={() => props.screenProps.clearCart()}></Button>
+                    </View>
+                    {cartProductsDisplay}            
+                    <Text style={{ fontSize: 16, margin: 16, marginLeft: 36 }}> Total: ${total.toFixed(2)} </Text>
+                    <Text style={{ fontSize: 16, margin: 16, marginLeft: 36 }}> Total After Tax(7%): ${( total * 1.07 ).toFixed( 2 )}</Text>
+                    <Checkout />   
+                </Animatable.View> 
             </ScrollView>
         );
         }

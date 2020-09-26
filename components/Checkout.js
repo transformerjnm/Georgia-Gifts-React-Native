@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Text, View, Modal } from 'react-native';
 import { Input, Button } from 'react-native-elements';
+import * as Animatable from 'react-native-animatable';
 
 export default Form = props => {
 		let [ name, setName ] = useState('');
@@ -29,7 +30,7 @@ export default Form = props => {
 		};
 
        	return(
-		   <View>
+		    <Animatable.View animation='fadeIn' duration={1000} delay={500}>
 				<Text style={{color: '#ea5e23', fontSize: 30, margin: 20, textAlign: 'center'}}>Checkout your order below!</Text>
 				<View style={{backgroundColor: '#F6F6F6', margin: 15, padding: 15, borderRadius: 16}}>
 						<Text style={{color: '#ea5e23', fontSize: 20,  textAlign: 'center'}}>Who are you?</Text>
@@ -132,6 +133,6 @@ export default Form = props => {
                     	</View>
                 	</Modal>
 				</View>
-		   </View>
+			</Animatable.View>
         );
 };

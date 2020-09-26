@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Text, View, Modal } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 
+
 export default Form = props => {
 		let [ name, setName ] = useState('');
 		let [ email, setEmail ] = useState('');
