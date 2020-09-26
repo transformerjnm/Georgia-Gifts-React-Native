@@ -13,8 +13,6 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 	};
 	
 	render() {
-		let getCartItemsId = () => this.state.cartItemsIds;
-
         let addCartItem = ( newItemId) =>{
             let newCart = [...this.state.cartItemsIds];
             newCart.push(newItemId);
@@ -127,7 +125,7 @@ import { createStackNavigator, createDrawerNavigator } from 'react-navigation';
 
 		return (
 			<View style={{ flex: 1, backgroundColor: '#FFF' }}>
-				<MainNavigator screenProps={{ cartItemsIds: this.state.cartItemsIds, addCartItem: addCartItem}}/>
+				<MainNavigator screenProps={{ cartItemsIds: this.state.cartItemsIds, addCartItem: addCartItem, removeCartItem: removeCartItem, clearCart: clearCart }}/>
 				<StatusBar style="auto" />
 			</View>
 		);
